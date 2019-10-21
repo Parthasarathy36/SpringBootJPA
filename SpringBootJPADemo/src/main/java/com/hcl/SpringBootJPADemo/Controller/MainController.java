@@ -95,7 +95,8 @@ public class MainController {
 
 	@RequestMapping(value = "/findByOrParameters/{id}/{password}", method = RequestMethod.POST, headers = "Accept=application/json")
 	public List<User> findByUserOrAndPassword(@PathVariable("id") int id, @PathVariable("password") String password) {
-
+            
+		System.out.println("Hai da");
 		return userService.findByUserIdOrPassword(id, password);
 	}
 
